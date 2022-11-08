@@ -1,4 +1,6 @@
-abstract public class Medium {
+import java.io.Serializable;
+
+abstract public class Medium implements Serializable{
     private String title, prod, kommentar;
     private PlayTime playTime;
     private boolean ownMedia;
