@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class main{
-    private static final Scanner input = new Scanner(System.in);
+    private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args){
         ArrayList<Medium> collect = new ArrayList<>();
@@ -14,19 +14,29 @@ public class main{
             "hello",
             15)
         );
+
         collect.add(new DVD("test",
             "test",
             inputCreatePlaytime(),
             false,
-            "hello darkness my friend")
+            "hello darkness my old friend")
         );
-
+        	
+        System.out.println("Speichern und ausgeben des array inhalts");
         for (Medium medium : collect) {
             System.out.println(medium);
             datenbank.erfasseMediumRAM(medium);
         }
-
-        datenbank.speichernMedien();
+        
+       // System.out.println("Speichern des arrays in eine datei!");
+       // datenbank.speichernMedienHD();
+       // System.out.println("Auslesen der datei!");
+       // datenbank.ladeMedienHD();
+       // System.out.println("Ab hier wird das Array ausgegeben!");
+       // datenbank.auflistenMedienRAM();
+        
+       datenbank.ladeMedienServer();
+       //datenbank.speichernMedienServer();
     }
 
     public static boolean inputOwnMedia(){
