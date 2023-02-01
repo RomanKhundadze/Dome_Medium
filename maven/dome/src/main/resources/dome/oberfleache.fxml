@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:controller="dome.PrimaryController" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="600.0">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="14.0" prefHeight="129.0" prefWidth="560.0">
+               <children>
+                  <TextField fx:id="titel" prefHeight="26.0" prefWidth="560.0" promptText="Titel" />
+                  <TextField fx:id="kuenstler" layoutY="36.0" prefHeight="20.0" prefWidth="560.0" promptText="Künstler" />
+                  <TextField fx:id="anzahlTitel" layoutY="71.0" prefHeight="20.0" prefWidth="560.0" promptText="Anzahl der Titel" />
+                  <TextField fx:id="gesamtZeitMinuten" layoutY="105.0" prefHeight="25.0" prefWidth="560.0" promptText="Gesamtspielzeit (Minuten)" />
+               </children>
+            </AnchorPane>
+            <CheckBox fx:id="besitzCheck" layoutX="19.0" layoutY="151.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="Habe ich in Besitz" />
+            <TextArea fx:id="kommentar" layoutX="19.0" layoutY="178.0" prefHeight="100.0" prefWidth="560.0" promptText="Kommentar" />
+            <ChoiceBox fx:id="choiceBox" layoutX="19.0" layoutY="287.0" prefWidth="150.0" />
+            <TextArea fx:id="output" editable="false" layoutX="19.0" layoutY="321.0" prefHeight="100.0" prefWidth="560.0" promptText="output" />
+            <Separator layoutX="14.0" layoutY="431.0" prefWidth="570.0" />
+            <AnchorPane layoutX="14.0" layoutY="441.0" prefHeight="26.0" prefWidth="107.0">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+                  <Button fx:id="saveButton" layoutX="39.0" mnemonicParsing="false" onAction="#Save" text="Save RAM" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
