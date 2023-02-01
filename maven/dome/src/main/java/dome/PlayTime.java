@@ -16,6 +16,12 @@ public class PlayTime implements Serializable{
         setGesamtSpielzeitSecunden(stunde, minute, secunde);
     }
 
+    public PlayTime(int minuten){
+        setStunde(minuten / 60);
+        setMinute((byte) (minuten % 60));
+        setSecunde((byte) 0);
+    }
+    
     public void setStunde(int stunde) { 
         filter(stunde);
         this.stunde = stunde;
